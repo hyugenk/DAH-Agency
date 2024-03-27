@@ -283,6 +283,7 @@
               <li data-filter=".filter-app">IoT</li>
               <li data-filter=".filter-card">UI/UX</li>
               <li data-filter=".filter-web">Website</li>
+              <li id="downloadButton">See More</li>
             </ul>
           </div>
         </div>
@@ -764,6 +765,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('downloadButton').addEventListener('click', function() {
+      var pdfUrl = 'https://drive.usercontent.google.com/download?id=1nbW2b5QoHvgOP5B0jWSfu4XE982M_vqt&export=download&authuser=0';
+      var link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'portfolio.pdf';
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
 
 </script>
 
